@@ -1,9 +1,9 @@
 
 # GOAL
 # 	the goal of this script is to help automatize the process of converting 
-#	  a Beamer Presentation (Latex) into a microsoft powerpoint
+#	a Beamer Presentation (Latex) into a microsoft powerpoint
 # 	it parses the file given in the variables texfile using regular
-#	  expressions and creates a powerpoint document with the
+#	expressions and creates a powerpoint document with the
 # 	same number of slides, with the slides titles , the images in each slides (but does not keep the size or layaout yet)
 # 	and creates an image for each equation that are also added to the slides
 #
@@ -16,14 +16,14 @@
 # 	could first convert to html using the commande htlatex and then parse the html# 
 # 	but on my machine i get errors when running htlatex (Can't find/open #	file `mathkerncmssi8.tfm')
 # 	i get the same error using tex4ht 
-#	  i did not get the time to pin down the problem 
+#	i did not get the time to pin down the problem 
 # 	plasTeX fails parsing when the latex uses 
 # 		-\usepackage{mathtools}
 #  		-french accents 
 #
 
-texfile='presentation_test.tex'
-
+texfile='example.tex'
+outputfile='example.pptx'
 
 
 from pptx import Presentation
@@ -56,8 +56,8 @@ title = slide.shapes.title
 subtitle = slide.placeholders[1]
 
 
-title.text = "Hello, World!"
-subtitle.text = "python-pptx was here!"
+title.text = "Hello"
+subtitle.text = "beamer to pptx conversion test"
 
 bullet_slide_layout = prs.slide_layouts[1]
 
@@ -155,4 +155,4 @@ for idslide,slide in enumerate(slides):
         pic = newslide.shapes.add_picture(figure, left, top,height=height)        
 
 print 'DONE'
-prs.save('test.pptx')
+prs.save(outputfile)

@@ -24,6 +24,8 @@ plasTeX fails parsing when the latex uses \usepackage{mathtools}
 you can convert compile the beamer into a pdf file and then convert the pdf to powerpoint using [pdf2pptx](https://github.com/ashafaei/pdf2pptx).
 This works by converting the pdf into a set of images (one image for each slide) and then make a powerpoint from these images.
 An obvious limitation of that approach is that you cannot reedit the slides in powerpoint and change the theme.
+If you are interested in converting powerpoints to beamer you can have a look at [pptx2beamer](https://github.com/IngoScholtes/pptx2beamer)
+which used the .Net framework and requires Visual Studio for the compilation.
 
 
 

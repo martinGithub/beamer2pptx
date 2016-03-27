@@ -15,7 +15,7 @@ and then run the script using python
 It is very basic for now, it doesn't even recreate the bullet points. But is it still usefull as a first step to speed up manual conversion.
 The main problem is that it uses regular expression to parse the latex document. 
 Parsing the latex robustly with regular expression seems difficult in case of nested brackets etc we should use a actual parser or maybe convert the document to xml using LaTexXML and then use a xml parser ?  http://dlmf.nist.gov/LaTeXML/get.html 
-we can alose parse the latex using  plasTeX 
+We could otherwise parse the latex using  plasTeX. 
 We could first convert to html using the command htlatex or tex4ht and then parse the html but on my machine the conversion does not seem to work, only the first slide is converted into the html
 plasTeX fails parsing when the latex uses \usepackage{mathtools}
 

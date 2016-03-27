@@ -19,5 +19,12 @@ we can alose parse the latex using  plasTeX
 We could first convert to html using the command htlatex or tex4ht and then parse the html but on my machine the conversion does not seem to work, only the first slide is converted into the html
 plasTeX fails parsing when the latex uses \usepackage{mathtools}
 
+## Alternatives 
+
+you can convert compile the beamer into a pdf file and then convert the pdf to powerpoint using [pdf2pptx](https://github.com/ashafaei/pdf2pptx).
+This works by converting the pdf into a set of images (one image for each slide) and then make a powerpoint from these images.
+An obvious limitation of that approach is that you cannot reedit the slides in powerpoint and change the theme.
+
+
 
 

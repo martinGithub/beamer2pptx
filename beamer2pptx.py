@@ -68,11 +68,15 @@ filecontent=raw.read()
 
 # Experiment using plasTeX
 # 	Instantiate a TeX processor and parse the input text
-#	from plasTeX.TeX import TeX
-#	tex = TeX()
-#	tex.input(filecontent)
-#	document = tex.parse()
-
+try:
+    from plasTeX.TeX import TeX
+    tex = TeX()
+    tex.input(filecontent)
+    document = tex.parse()
+except:
+    print 'could not parse the latex fil eusing plasTex'
+    raise
+    
 
 
 filecontent=re.sub(r"""^%.*\n""",'%', filecontent)# remove comments

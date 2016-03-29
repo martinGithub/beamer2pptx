@@ -4,11 +4,18 @@ A python script to convert Beamer (latex) presentations to PowerPoint presentati
 ## Goal
 the goal of this script is to help automatize the process of converting  a Beamer Presentation (Latex) into a microsoft powerpoint.
 It parses the file given in the variables texfile using regular expressions and creates a powerpoint document with the same number of slides, with the slides titles, the images in each slides (but does not keep the size or layaout yet) and creates an image for each equation that are also added to the slides
+## Installation
+
+you need to install the [python-pptx package](https://python-pptx.readthedocs.org/en/latest/user/install.html) 
+
+    pip install python-pptx
 
 ## Usage
 
 replace the right part in line texfile='example.tex' using the name of you latex file
 and then run the script using python
+
+    python beamer2pptx.py
 
 ## Limitations
 
@@ -28,7 +35,7 @@ This works by converting the pdf into a set of images (one image for each slide)
 An obvious limitation of that approach is that you cannot reedit the slides in powerpoint and change the theme.
 
 
-You can compile the beamer into a pdf file and then open the pdf in libreOffice (tested with version 4.2.8.2). The text might not be well preserved if you use some latin encoding for example (you can many strange characters), but the positions of the images are good. However the latex equations won't be well preserved. You might then be able to export into an ODF that you can import in powerpoint.
+You can compile the beamer into a pdf file and then open the pdf in libreOffice (tested with version 4.2.8.2). The text might not be well preserved if you use some latin encoding for example (you may see many strange characters), but the positions of the images are good. However the latex equations won't be well preserved. You might then be able to export into an ODF that you might be able to import in powerpoint.
 
 
 If you are interested in converting powerpoints files to beamer you can have a look at [pptx2beamer](https://github.com/IngoScholtes/pptx2beamer)

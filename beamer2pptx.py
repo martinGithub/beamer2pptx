@@ -68,14 +68,14 @@ filecontent=raw.read()
 
 # Experiment using plasTeX
 # 	Instantiate a TeX processor and parse the input text
-try:
-    from plasTeX.TeX import TeX
-    tex = TeX()
-    tex.input(filecontent)
-    document = tex.parse()
-except:
-    print 'could not parse the latex fil eusing plasTex'
-    raise
+#try:
+#    from plasTeX.TeX import TeX
+#    tex = TeX()
+#    tex.input(filecontent)
+#    document = tex.parse()
+#except:
+#    print 'could not parse the latex fil eusing plasTex'
+#    raise
     
 
 

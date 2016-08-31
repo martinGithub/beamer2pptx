@@ -37,7 +37,7 @@ def formula_as_file( formula, file, negate=False,header='' ):
     
     latexfile = open('tmp_equation.tex', 'w')
     latexfile.write('\\documentclass[preview]{standalone}')    
-    latexfile.write('\\input{header.tex}') 
+    #latexfile.write('\\input{header.tex}') # uncomment this line and change false to true line 87 if you have macros that need to be use in the original latex document
     latexfile.write('\n\\begin{document}')   
     latexfile.write('$%s$'%formula)
     latexfile.write('\n\\end{document}  ') 

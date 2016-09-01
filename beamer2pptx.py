@@ -99,6 +99,10 @@ if False:
 #items= re.findall(r"""item (.*?) """, raw.read())
 slides = re.findall(r"""\\begin\{frame\}(.*?)\\end\{frame\}""",filecontent,re.DOTALL)
 ideqn=0
+
+
+if not os.path.exists('equations'):
+    os.makedirs('equations')
 for idslide,slide in enumerate(slides):
     nbeqslide=0
     newslide = prs.slides.add_slide(bullet_slide_layout)
